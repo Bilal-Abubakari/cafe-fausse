@@ -9,6 +9,7 @@ import vegetableRisottoImg from '../../assets/images/vegetable_risotto.png';
 import tiramisuImg from '../../assets/images/tiramisu.png';
 import cheesecakeImg from '../../assets/images/cheesecake.png';
 import redWineGlassImg from '../../assets/images/red_wine_glass.png';
+import whiteWineGlassImg from '../../assets/images/white_wine_glass.png';
 
 /**
  * Menu Page Component
@@ -87,7 +88,7 @@ const Menu = () => {
         name: 'White Wine (Glass)',
         description: 'Crisp and refreshing',
         price: 9.00,
-        image: bruschetaImg
+        image: whiteWineGlassImg
       },
       {
         id: 10,
