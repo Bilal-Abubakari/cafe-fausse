@@ -5,6 +5,7 @@ import bruschetaImg from '../../assets/images/bruschetta.png';
 import caesarSaladImg from '../../assets/images/caesar_salad.png';
 import grilledSalmonImg from '../../assets/images/grilled_salmon.png';
 import ribeyeSteakImg from '../../assets/images/ribeye_steak.png';
+import vegetableRisottoImg from '../../assets/images/vegetable_risotto.png';
 
 /**
  * Menu Page Component
@@ -51,7 +52,7 @@ const Menu = () => {
         name: 'Vegetable Risotto',
         description: 'Creamy Arborio rice with wild mushrooms',
         price: 18.00,
-        image: bruschetaImg
+        image: vegetableRisottoImg
       }
     ],
     desserts: [
