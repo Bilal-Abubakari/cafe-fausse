@@ -6,6 +6,7 @@ import caesarSaladImg from '../../assets/images/caesar_salad.png';
 import grilledSalmonImg from '../../assets/images/grilled_salmon.png';
 import ribeyeSteakImg from '../../assets/images/ribeye_steak.png';
 import vegetableRisottoImg from '../../assets/images/vegetable_risotto.png';
+import tiramisuImg from '../../assets/images/tiramisu.png';
 
 /**
  * Menu Page Component
@@ -61,7 +62,7 @@ const Menu = () => {
         name: 'Tiramisu',
         description: 'Classic Italian dessert with mascarpone',
         price: 7.50,
-        image: bruschetaImg
+        image: tiramisuImg
       },
       {
         id: 7,
