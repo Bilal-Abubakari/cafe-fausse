@@ -8,6 +8,7 @@ import ribeyeSteakImg from '../../assets/images/ribeye_steak.png';
 import vegetableRisottoImg from '../../assets/images/vegetable_risotto.png';
 import tiramisuImg from '../../assets/images/tiramisu.png';
 import cheesecakeImg from '../../assets/images/cheesecake.png';
+import redWineGlassImg from '../../assets/images/red_wine_glass.png';
 
 /**
  * Menu Page Component
@@ -79,7 +80,7 @@ const Menu = () => {
         name: 'Red Wine (Glass)',
         description: 'A selection of Italian reds',
         price: 10.00,
-        image: bruschetaImg
+        image: redWineGlassImg
       },
       {
         id: 9,
