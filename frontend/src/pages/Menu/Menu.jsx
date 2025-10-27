@@ -7,6 +7,7 @@ import grilledSalmonImg from '../../assets/images/grilled_salmon.png';
 import ribeyeSteakImg from '../../assets/images/ribeye_steak.png';
 import vegetableRisottoImg from '../../assets/images/vegetable_risotto.png';
 import tiramisuImg from '../../assets/images/tiramisu.png';
+import cheesecakeImg from '../../assets/images/cheesecake.png';
 
 /**
  * Menu Page Component
@@ -69,7 +70,7 @@ const Menu = () => {
         name: 'Cheesecake',
         description: 'Creamy cheesecake with berry compote',
         price: 7.00,
-        image: bruschetaImg
+        image: cheesecakeImg
       }
     ],
     beverages: [
