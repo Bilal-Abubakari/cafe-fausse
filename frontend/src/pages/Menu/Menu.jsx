@@ -10,6 +10,8 @@ import tiramisuImg from '../../assets/images/tiramisu.png';
 import cheesecakeImg from '../../assets/images/cheesecake.png';
 import redWineGlassImg from '../../assets/images/red_wine_glass.png';
 import whiteWineGlassImg from '../../assets/images/white_wine_glass.png';
+import craftBeerImg from '../../assets/images/craft_beer.png';
+import espressoImg from '../../assets/images/espresso.png';
 
 /**
  * Menu Page Component
@@ -95,14 +97,14 @@ const Menu = () => {
         name: 'Craft Beer',
         description: 'Local artisan brews',
         price: 6.00,
-        image: bruschetaImg
+        image: craftBeerImg
       },
       {
         id: 11,
         name: 'Espresso',
         description: 'Strong and aromatic',
         price: 3.00,
-        image: bruschetaImg
+        image: espressoImg
       }
     ]
   };
