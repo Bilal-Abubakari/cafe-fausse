@@ -1,0 +1,373 @@
+.reservations-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Hero Section */
+.reservations-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/gallery-cafe-interior.webp') center/cover;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: 'Georgia', serif;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Reservation Form Section */
+.reservation-form-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+}
+
+.reservation-form-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.form-header h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-family: 'Georgia', serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.form-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #8b6914;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+/* Form Styles */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b6914;
+  box-shadow: 0 0 0 3px rgba(139, 105, 20, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group select {
+  cursor: pointer;
+  background-color: white;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #8b6914;
+  color: white;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #6b5010;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 105, 20, 0.3);
+}
+
+.form-note {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Error Message */
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  border-left: 4px solid #d32f2f;
+}
+
+/* Success Container */
+.success-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.success-container h2 {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.success-container > p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation-details {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirmation-details p {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.confirmation-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.confirmation-note {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* Info Sidebar */
+.info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-sidebar .info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-sidebar .info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-sidebar .info-card h3 {
+  font-size: 1.3rem;
+  color: #8b6914;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.info-sidebar .info-card p {
+  margin: 0.5rem 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .reservation-form-section .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .info-sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservations-hero {
+    min-height: 40vh;
+  }
+
+  .form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .reservation-form-section {
+    padding: 3rem 1rem;
+  }
+
+  .info-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-details {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservations-hero {
+    min-height: 35vh;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .submit-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .success-container {
+    padding: 2rem 1rem;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
