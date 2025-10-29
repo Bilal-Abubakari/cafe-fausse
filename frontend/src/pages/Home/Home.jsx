@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Footer from '../../components/Footer/Footer.jsx';
 import './Home.css';
 import Navigation from "../../components/Navigation/Navigation.jsx";
+import galleryCafeInterior from "../../assets/images/gallery-cafe-interior.webp";
+import galleryRibeyeSteak from "../../assets/images/gallery-ribeye-steak.webp";
+import gallerySpecialEvent from "../../assets/images/gallery-special-event.webp";
 
 const Home = () => {
   const [email, setEmail] = useState('');
@@ -105,21 +108,21 @@ const Home = () => {
           <h2>Experience Our Ambiance</h2>
           <div className="showcase-grid">
             <div className="showcase-item">
-              <img src="/src/assets/images/gallery-cafe-interior.webp" alt="Café Interior" />
+              <img src={galleryCafeInterior} alt="Café Interior" />
               <div className="showcase-overlay">
                 <h3>Elegant Interior</h3>
                 <p>Experience fine dining in a sophisticated atmosphere</p>
               </div>
             </div>
             <div className="showcase-item">
-              <img src="/src/assets/images/gallery-ribeye-steak.webp" alt="Ribeye Steak" />
+              <img src={galleryRibeyeSteak} alt="Ribeye Steak" />
               <div className="showcase-overlay">
                 <h3>Premium Cuisine</h3>
                 <p>Expertly crafted dishes with the finest ingredients</p>
               </div>
             </div>
             <div className="showcase-item">
-              <img src="/src/assets/images/gallery-special-event.webp" alt="Special Events" />
+              <img src={gallerySpecialEvent} alt="Special Events" />
               <div className="showcase-overlay">
                 <h3>Special Events</h3>
                 <p>Perfect venue for your memorable occasions</p>
