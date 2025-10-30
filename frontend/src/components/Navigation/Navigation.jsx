@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,19 +23,19 @@ const Navigation = () => {
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/menu" className="nav-link" onClick={() => setIsOpen(false)}>Menu</Link>
+            <Link to="/menu" className={`nav-link ${location.pathname === '/menu' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Menu</Link>
           </li>
           <li className="nav-item">
-            <Link to="/reservations" className="nav-link" onClick={() => setIsOpen(false)}>Reservations</Link>
+            <Link to="/reservations" className={`nav-link ${location.pathname === '/reservations' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Reservations</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>About Us</Link>
           </li>
           <li className="nav-item">
-            <Link to="/gallery" className="nav-link" onClick={() => setIsOpen(false)}>Gallery</Link>
+            <Link to="/gallery" className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`} onClick={() => setIsOpen(false)}>Gallery</Link>
           </li>
         </ul>
       </div>

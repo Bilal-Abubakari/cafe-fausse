@@ -3,10 +3,13 @@ import './About.css';
 import antonioRossi from '../../assets/images/antonio_rossi.png';
 import mariaLopez from '../../assets/images/maria_lopez.png';
 import cafeInterior from '../../assets/images/gallery-cafe-interior.webp';
+import Navigation from "../../components/Navigation/Navigation.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 
 const About = () => {
   return (
     <div className="about-page">
+        <Navigation />
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero-overlay"></div>
@@ -177,6 +180,7 @@ const About = () => {
           </div>
         </div>
       </section>
+        <Footer />
     </div>
   );
 };
