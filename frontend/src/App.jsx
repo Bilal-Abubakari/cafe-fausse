@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import Reservations from './pages/Reservations/Reservations';
 import Menu from './pages/Menu/Menu';
 import About from './pages/About/About';
-// import Gallery from './pages/Gallery/Gallery';
+import Gallery from './pages/Gallery/Gallery';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
                   <Route path="/reservations" element={<Reservations />} />
                   <Route path="/menu" element={<Menu />} />
                   <Route path="/about" element={<About />} />
-                  {/*<Route path="/gallery" element={<Gallery />} />*/}
+                  <Route path="/gallery" element={<Gallery />} />
               </Routes>
           </div>
       </Router>
