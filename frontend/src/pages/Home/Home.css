@@ -343,6 +343,12 @@
   border-color: #8b6914;
 }
 
+.newsletter-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+}
+
 .newsletter-button {
   padding: 1.2rem 2.5rem;
   background-color: #8b6914;
@@ -357,10 +363,16 @@
   transition: all 0.3s ease;
 }
 
-.newsletter-button:hover {
+.newsletter-button:hover:not(:disabled) {
   background-color: #6b5010;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 105, 20, 0.4);
+}
+
+.newsletter-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #666;
 }
 
 .success-message {

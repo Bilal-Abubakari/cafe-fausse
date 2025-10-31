@@ -10,32 +10,43 @@ const Home = () => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setError('Please enter a valid email address');
+      setIsLoading(false);
       return;
     }
 
     try {
-      // TODO: Connect to Flask backend endpoint
-      // const response = await fetch('/api/newsletter', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email })
-      // });
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000/api';
+      const response = await fetch(`${backendUrl}/newsletter/signup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to subscribe');
+      }
 
       setSubscribed(true);
       setEmail('');
       setTimeout(() => setSubscribed(false), 5000);
     } catch (error) {
-      setError('Failed to subscribe. Please try again.');
+      setError(error.message || 'Failed to subscribe. Please try again.');
       console.error('Newsletter subscription error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -144,9 +155,12 @@ const Home = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              disabled={isLoading}
               className="newsletter-input"
             />
-            <button type="submit" className="newsletter-button">Subscribe</button>
+            <button type="submit" className="newsletter-button" disabled={isLoading}>
+              {isLoading ? 'Subscribing...' : 'Subscribe'}
+            </button>
           </form>
           {subscribed && <p className="success-message">Thank you for subscribing!</p>}
           {error && <p className="error-message">{error}</p>}
