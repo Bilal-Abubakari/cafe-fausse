@@ -130,6 +130,7 @@ def create_reservation_endpoint():
 
         if reservation:
             return jsonify({
+                'success': True,
                 'message': 'Reservation confirmed successfully!',
                 'reservation_id': reservation.reservation_id,
                 'table_number': table_number,
